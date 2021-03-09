@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <!--<hr />-->
+        <nav id="mainNav">
+            <ul>
+                <li class="nav-item"><a href="index.html"><span style="display:block;">Home</span></a></li>
+                <li class="nav-item"><a href="portfolio.html"><span style="display:block;">Portfolio</span></a></li>
+                <li class="nav-item"><a href="contact.html"><span style="display:block;">Contact</span></a></li>
+            </ul>
+
+        </nav>
+        <!---->
+    </header>
+    <div style="background-color:#f8f2fa; padding:2vw;">
+        <h1 style="font-size:2.5em;">Here are some projects I've worked on!</h1>
+    </div>
+    <div class="container">
+
+
+        <button type="button" class="collapsible"><span class="expando">+</span>Album manager WPF application<img class="collapsible-preview" style="float:right;" src="https://magoarcade.org/wp/wp-content/uploads/2019/11/wpf.png" /></button>
+        <div class="content">
+            <div style="display:flex;">
+                <p style="width:60%;">A three tiered WPF application (database, business layer and GUI) with unit tests. It allows the user to queue albums,
+                manage their library, and view their listening history. It includes an asynchronous API call to automatically retrieve album artwork based 
+                on what the user enters for the artist name and album name.</p>
+                <img class="collapsible-image" src="./project1-1.png" />
+            </div>
+        </div>
+        <button type="button" class="collapsible"><span class="expando">+</span>Radio WPF application<img class="collapsible-preview" style="float:right;" src="https://magoarcade.org/wp/wp-content/uploads/2019/11/wpf.png" /></button>
+        <div class="content">
+            <div style="display:flex;">
+                <p style="width:60%;">A WPF application with two layers, based on OOP. The radio object is controlled by the events triggered by the GUI. When played,
+                each channel plays a different genre. A queue of 5 songs will play in a random order for each channel.</p>
+                <img class="collapsible-image" src="./project2.png" />
+            </div>
+        </div>
+        <button type="button" class="collapsible"><span class="expando">+</span>Calculator WPF application<img class="collapsible-preview" style="float:right;" src="https://magoarcade.org/wp/wp-content/uploads/2019/11/wpf.png" /></button>
+        <div class="content">
+            <div style="display:flex;">
+                <p style="width:60%;">A simple WPF application to do basic maths problems.</p>
+                <img class="collapsible-image" src="./project3.png" />
+            </div>
+        </div>
+        <button type="button" class="collapsible"><span class="expando">+</span>Static Website<img class="collapsible-preview" style="float:right;" src="https://miro.medium.com/max/792/1*lJ32Bl-lHWmNMUSiSq17gQ.png" /></button>
+        <div class="content">
+            <div style="display:flex;">
+                <p style="width:40%;">A four page website made from scratch with custom CSS.</p>
+                <iframe src="https://drive.google.com/file/d/1ihygvJIxg768i41f9M-GsLt80QLh1q8f/preview" width="720" height="480" style="float:right;"></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <script src="commonscripts.js"></script>
+</body>
+</html>
